@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+  background-image: linear-gradient(#35354e, #6767da);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 8;
+}
+
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+header ul li{
+    list-style:none ;
+    margin-left: 20px; 
+}
+header ul li a{
+     text-decoration: none;
+     padding: 6px 15px;
+     color: #fff;
+     border-radius: 20px;
+}
+.home{
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+}
+header ul li a:hover,
+header ul li a.home{
+    background-color: #fff;
+    color: #000;
+}
+.images {
+
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.images img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#moon {
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+#moon-header {
+  font-size: 80px;
+  z-index: 2;
+  position: absolute;
+  color: white;
+  white-space: nowrap ;
+
+}
+#behind {
+  z-index: 1;
+}
+
+#front {
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  /* background-color: #2b1055; */
+  background-image: linear-gradient(#35354e, #6767da);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+div.content::before{
+    content: '';
+    position: relative;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#1c0522,transparent);
+    z-index: 1000;
+
+}
+.content p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: left;
+  font-size: medium;
+  color: #ffffff;
+  line-height: 30px;
+
+  
+}
+.content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  line-height: 15px;
+
+}
+button {
+  color: black;
+  border: none;
+  border-radius: 20px;
+  background: #ffffff;
+  text-decoration: none;
+  padding: 8px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  transform: translateY(100px);
+  z-index: 2;
+}
